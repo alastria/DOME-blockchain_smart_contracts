@@ -1,5 +1,7 @@
 ## Hardhat Guide 
 
+.env file must be filled with the private key, and the IP of the network's node.
+
 #### Installation
 ```sh
 cd Hardhat
