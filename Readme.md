@@ -2,10 +2,7 @@
 
 # Usage
 
-The main function is: 
-```sh
-emitNewEvent
-```
+The main function is: ``` emitNewEvent ```
 
 Which accepts 4 input parameters:
 
@@ -16,7 +13,7 @@ Which accepts 4 input parameters:
   string[] metadata   
 ```
 
-This function ```sh emitNewEvent ``` wil emit an event with the following properties:
+This function ``` emitNewEvent ``` wil emit an event with the following properties:
 
 ```sh
 event EventDOMEv1(
