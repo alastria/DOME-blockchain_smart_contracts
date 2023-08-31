@@ -3,11 +3,11 @@
 Contract deployed in Alastria T Network, in the following address:
 
 ```sh
-0x5732272d51C3228390e5874039646DE5eFdf7273
+0x313d5008857cc4D29d383A3F5D5Cf8fBc0E91979
 ```
 
-
-# Usage
+# Contract usage
+## Event emit
 
 The main function is: ``` emitNewEvent ```
 
@@ -20,7 +20,7 @@ Which accepts 4 input parameters:
   string[] metadata   
 ```
 
-This function ``` emitNewEvent ``` wil emit an event with the following properties:
+The function ``` emitNewEvent ``` wil emit an event with the following properties:
 
 ```sh
 event EventDOMEv1(
@@ -34,6 +34,11 @@ event EventDOMEv1(
 ```
 
 Events could be filtered by index, timestamp and origin.
+
+## Ownership transfer
+
+The function ```transferOwnership ``` allow to the owner, to transfer the ownership of the contract, in order to be able to execute the function ``` emitNewEvent ```.
+```transferOwnership ``` only accepts one input parameter: A valid Ethereum address.
 
 
 # Deployment
