@@ -1,5 +1,12 @@
 # DOME-blockchain_smart_contracts
 
+Contract deployed in Alastria T Network, in the following address:
+
+```sh
+0x5732272d51C3228390e5874039646DE5eFdf7273
+```
+
+
 # Usage
 
 The main function is: ``` emitNewEvent ```
