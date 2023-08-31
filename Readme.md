@@ -3,7 +3,7 @@
 Contract deployed in Alastria T Network, in the following address:
 
 ```sh
-0x313d5008857cc4D29d383A3F5D5Cf8fBc0E91979
+0x8F21Cf828d0e69152b80a02B50aC42Bb62A167Eb
 ```
 
 # Contract usage
