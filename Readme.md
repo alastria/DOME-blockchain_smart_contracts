@@ -43,9 +43,11 @@ The function ```transferOwnership ``` allow to the owner, to transfer the owners
 
 # Deployment
 
-## Installation
+## Project installation
+
+Prerequisites: NodeJS (tested with v18.17.0)
+
 ```sh
-cd Hardhat
 npm install
 ```
 
