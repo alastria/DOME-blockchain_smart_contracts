@@ -2,13 +2,13 @@
 pragma solidity ^0.8.0;
 
 
-interface IEventManagerDOMEv1 {   
+interface IEventManagerDOMEv1 {
 
     event EventDOMEv1(
-        uint256 indexed index,
+        uint256 index,
         uint256 indexed timestamp,
         address indexed origin,
-        string eventType,
+        string indexed eventType,
         string dataLocation,
         string[] metadata
     );

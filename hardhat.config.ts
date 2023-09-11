@@ -10,15 +10,13 @@ import "solidity-coverage";
 
 dotenv.config();
 
-const chainIds = {
-  t_alastria: 83584648538,
-  b_alastria: 2020
-};
-
 const { //This variables must be in the .env file, in order to work (like .env.example)
+  T_NET_CHAIN_ID,
+  B_NET_CHAIN_ID,
   PRIVATE_KEY,
   T_NODE_IP,
-  B_NODE_IP
+  B_NODE_IP,
+  NODE_ENDPOINT
 } = process.env;
 
 
@@ -37,15 +35,24 @@ const config: HardhatUserConfig = {
     }
   },
   networks: {
+    hardhat: {
+      //We fork Alastria blockchain in localhost, for development purposes.
+      chainId: Number(T_NET_CHAIN_ID),
+      forking: {
+        url: NODE_ENDPOINT,
+        //blockNumber: 31616435
+      }
+    },
     t_alastria: {
-      url: `http:///${T_NODE_IP}:22000`,
-      chainId: chainIds.t_alastria,
+      url: NODE_ENDPOINT,
+      //url: `http:///${T_NODE_IP}:22000`,
+      chainId: Number(T_NET_CHAIN_ID),
       gasPrice: 0,
       accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : []
     },
     b_alastria: {
       url: `http:///${B_NODE_IP}:8545`,
-      chainId: chainIds.b_alastria,
+      chainId: Number(B_NET_CHAIN_ID),
       gasPrice: 0,
       accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : []
     }
