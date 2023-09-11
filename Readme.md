@@ -91,7 +91,7 @@ npx hardhat test
 
 ## Coverage
 
- - ✓ 1- Deployment should assign the deployer's address to the allowed address
- - ✓ 2- Allowed address should be able to emit an event
- - ✓ 3- NOT Allowed address should NOT be able to emit an event
+ 1. ✓ 1- Deployment should assign the deployer's address to the allowed address
+ 2. ✓ 2- Allowed address should be able to emit an event
+ 3. ✓ 3- NOT Allowed address should NOT be able to emit an event
    
