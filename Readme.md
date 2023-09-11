@@ -41,9 +41,15 @@ The function ```transferOwnership ``` allow to the owner, to transfer the owners
 ```transferOwnership ``` only accepts one input parameter: A valid Ethereum address.
 
 
-# Mainnet Deployment
+# Deployment
 
-## Alastria in Localhost fork Deployment
+## Installation
+```sh
+cd Hardhat
+npm install
+```
+
+## Localhost with Alastria network's state fork 
 
 You can interact with Smart Contracts in localhost network which contains all the Alastria T Network state.
 With this project, you can get a complete fork of the original network in localhost, thanks to hardhat network configuration in ```hardhat.config.ts``` file.
@@ -54,15 +60,10 @@ npx hardhat compile
 npx hardhat run ./scripts/deploy.ts --network hardhat
 ```
 
-## Mainnet Deployment
+## Alastria Mainnet
 
 .env file must be filled with the private key, and the IP of the network's node.
 
-### Installation
-```sh
-cd Hardhat
-npm install
-```
 
 ### Deployment in T Network
 ```sh
