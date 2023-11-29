@@ -25,7 +25,7 @@ const { //This variables must be in the .env file, in order to work (like .env.e
 
 const config: HardhatUserConfig = {
   solidity: {
-    version: "0.8.1",
+    version: "0.8.21",
     settings: {
       optimizer: {
         enabled: true,
