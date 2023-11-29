@@ -42,27 +42,56 @@ The function ```transferOwnership ``` allow to the owner, to transfer the owners
 
 
 # Deployment
-## Hardhat Guide 
 
-.env file must be filled with the private key, and the IP of the network's node.
+## Project installation
 
-#### Installation
+Prerequisites: NodeJS (tested with v18.17.0)
+
 ```sh
-cd Hardhat
 npm install
 ```
 
-#### Deployment in T Network
+## Localhost with Alastria network's state fork 
+
+You can interact with Smart Contracts in localhost network which contains all the Alastria T Network state.
+With this project, you can get a complete fork of the original network in localhost, thanks to hardhat network configuration in ```hardhat.config.ts``` file.
+
+```sh
+npx hardhat clean
+npx hardhat compile
+npx hardhat run ./scripts/deploy.ts --network hardhat
+```
+
+## Alastria Mainnet
+
+.env file must be filled with the private key, and the IP of the network's node.
+
+
+### Deployment in T Network
 ```sh
 npx hardhat clean
 npx hardhat compile
 npx hardhat run ./scripts/deploy.ts --network t_alastria
 ```
 
-#### Deployment in B Network
+### Deployment in B Network
 ```sh
 npx hardhat clean
 npx hardhat compile
 npx hardhat run ./scripts/deploy.ts --network b_alastria
 ```
 
+
+# Automated testing
+
+You can run the automated tests with the following command:
+```sh
+npx hardhat test
+```
+
+## Coverage
+
+ 1. ✓ Deployment should assign the deployer's address to the allowed address
+ 2. ✓ Allowed address should be able to emit an event
+ 3. ✓ NOT Allowed address should NOT be able to emit an event
+   
