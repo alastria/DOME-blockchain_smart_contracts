@@ -79,11 +79,11 @@ async function initApp() {
 
 }
 
-async function TEST_emitSomeEvent() {
+async function TEST_emitSomeEvent(j) {
 
-  await domeContractWithSigner.emitNewEvent(sha256_1, sha256_2, "EventDOMEv1", "data_location1", ["meta1", "data1"]);
-  await domeContractWithSigner.emitNewEvent(sha256_3, sha256_4, "EventDOMEv1", "data_location2", ["meta2", "data2"]);
-  await domeContractWithSigner.emitNewEvent(sha256_5, sha256_6, "EventDOMEv1", "data_location3", ["meta3", "data3"]);
+  for (i=1; i<=j; i++){
+      await domeContractWithSigner.emitNewEvent("1", ["sha256_"+i], "EventDOMEv1", "data_location1", ["meta1", "data1"]);
+  }
 
 }
 

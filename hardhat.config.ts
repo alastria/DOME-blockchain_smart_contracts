@@ -39,19 +39,20 @@ const config: HardhatUserConfig = {
       //We fork Alastria blockchain in localhost, for development purposes.
       chainId: Number(T_NET_CHAIN_ID),
       forking: {
-        url: NODE_ENDPOINT,
+        url: `http://${T_NODE_IP}:22000`
         //blockNumber: 31616435
       }
     },
     t_alastria: {
-      url: NODE_ENDPOINT,
-      //url: `http:///${T_NODE_IP}:22000`,
+      url: `${NODE_ENDPOINT}`, //Single URL endpoint
+      //url: String(NODE_ENDPOINT), //Alternative way
+      //url: `http://${T_NODE_IP}:22000`, //Node IP
       chainId: Number(T_NET_CHAIN_ID),
       gasPrice: 0,
       accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : []
     },
     b_alastria: {
-      url: `http:///${B_NODE_IP}:8545`,
+      url: `http://${B_NODE_IP}:8545`,  //Node IP
       chainId: Number(B_NET_CHAIN_ID),
       gasPrice: 0,
       accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : []
