@@ -11,9 +11,7 @@ contract EventManagerDOMEv1 is IEventManagerDOMEv1, Ownable {
     function emitNewEvent(
       bytes32  _origin,
       bytes32  _entityIDHash,
-      //string   memory  _origin,
-      //string   memory _entityIDHash,
-      //
+      bytes32  _previousEntityHash,
       string   memory _eventType,
       string   memory _dataLocation,
       string[] memory _metadata
@@ -24,10 +22,10 @@ contract EventManagerDOMEv1 is IEventManagerDOMEv1, Ownable {
             block.timestamp,
             _origin,
             _entityIDHash,
+            _previousEntityHash,
             _eventType,
             _dataLocation,
-            _metadata,
-            true
+            _metadata
         );
 
         index++;

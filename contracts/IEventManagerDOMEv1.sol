@@ -7,24 +7,23 @@ interface IEventManagerDOMEv1 {
     event EventDOMEv1(
         uint256  index,
         uint256  timestamp,
-        //
+
         bytes32  indexed origin,
         bytes32  indexed entityIDHash,
-        //string  indexed origin,
-        //string  indexed entityIDHash,
-        //
+        bytes32  indexed previousEntityHash, //AÑADIDO
+
         string   eventType,
         string   dataLocation,
-        string[] metadata,
-        bool     indexed active
+        string[] metadata
+        //bool     indexed active //ELIMINADO
+
     );
 
     function emitNewEvent(
         bytes32  origin,
         bytes32  entityIDHash,
-        //string   memory origin,
-        //string   memory entityIDHash,
-        //
+        bytes32  previousEntityHash,
+
         string   memory eventType,
         string   memory dataLocation,
         string[] memory metadata
