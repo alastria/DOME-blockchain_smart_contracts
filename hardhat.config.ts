@@ -6,11 +6,14 @@ import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
 import "hardhat-gas-reporter";
 import "solidity-coverage";
+import "@nomiclabs/hardhat-ethers";
+
 /* import "@openzeppelin/hardhat-upgrades"; */
 
 dotenv.config();
 
 const { //This variables must be in the .env file, in order to work (like .env.example)
+  NET_CHAIN_ID,
   T_NET_CHAIN_ID,
   B_NET_CHAIN_ID,
   PRIVATE_KEY,
@@ -54,6 +57,12 @@ const config: HardhatUserConfig = {
     b_alastria: {
       url: `http://${B_NODE_IP}:8545`,  //Node IP
       chainId: Number(B_NET_CHAIN_ID),
+      gasPrice: 0,
+      accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : []
+    },
+    ganache: {
+      url: NODE_ENDPOINT,  //Node IP
+      chainId: Number(NET_CHAIN_ID),
       gasPrice: 0,
       accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : []
     }
