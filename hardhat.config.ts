@@ -61,8 +61,7 @@ const config: HardhatUserConfig = {
       accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : []
     },
     ganache: {
-      url: NODE_ENDPOINT,  //Node IP
-      chainId: Number(NET_CHAIN_ID),
+      url: `${NODE_ENDPOINT}`, //Single URL endpoint
       gasPrice: 0,
       accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : []
     }
