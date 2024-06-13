@@ -4,7 +4,7 @@ pragma solidity 0.8.21;
 import "./IEventManagerDOMEv1.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract EventManagerDOMEv1 is IEventManagerDOMEv1 {
+contract EventManagerDOMEv1 is IEventManagerDOMEv1, Ownable {
 
     uint256 public index;
 
