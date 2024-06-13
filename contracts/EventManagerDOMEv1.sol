@@ -16,12 +16,13 @@ contract EventManagerDOMEv1 is IEventManagerDOMEv1 {
       string   memory _eventType,
       string   memory _dataLocation,
       string[] memory _metadata
-    ) external override onlyOwner returns (bool) {
+    ) external override returns (bool) {
 
         emit EventDOMEv1(
             index,
             block.timestamp,
-            _origin,
+            _publisherAddress,
+            _authorAdress,
             _entityIDHash,
             _previousEntityHash,
             _eventType,
