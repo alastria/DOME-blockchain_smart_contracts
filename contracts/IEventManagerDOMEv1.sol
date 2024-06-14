@@ -9,7 +9,7 @@ interface IEventManagerDOMEv1 {
         uint256  timestamp,
 
         bytes32  indexed publisherAddress,
-        bytes32  indexed authorAddress,
+        bytes32  authorAddress,
         bytes32  indexed entityIDHash,
         bytes32  indexed previousEntityHash, //AÑADIDO
 
