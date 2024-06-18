@@ -10,7 +10,7 @@ contract EventManagerDOMEv1 is IEventManagerDOMEv1, Ownable {
 
     function emitNewEvent(
       bytes32  _publisherAddress,
-      bytes32  _authorAdress,
+      address  _authorAdress,
       bytes32  _entityIDHash,
       bytes32  _previousEntityHash,
       string   memory _eventType,

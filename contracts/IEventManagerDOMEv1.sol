@@ -9,7 +9,7 @@ interface IEventManagerDOMEv1 {
         uint256  timestamp,
 
         bytes32  indexed publisherAddress,
-        bytes32  authorAddress,
+        address  authorAddress,
         bytes32  indexed entityIDHash,
         bytes32  indexed previousEntityHash, //AÑADIDO
 
@@ -22,7 +22,7 @@ interface IEventManagerDOMEv1 {
 
     function emitNewEvent(
         bytes32  publisherAddress,
-        bytes32  authorAddress,
+        address  authorAddress,
         bytes32  entityIDHash,
         bytes32  previousEntityHash,
 

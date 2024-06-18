@@ -1,6 +1,7 @@
 Example-NodeJS/.env
 .env
-artifacts
+artifacts/*
+!artifacts/EventManagerDomev1.json
 cache
 typechain
 node_modules
