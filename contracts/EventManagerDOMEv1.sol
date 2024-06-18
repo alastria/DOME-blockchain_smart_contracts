@@ -9,18 +9,20 @@ contract EventManagerDOMEv1 is IEventManagerDOMEv1, Ownable {
     uint256 public index;
 
     function emitNewEvent(
-      bytes32  _origin,
+      bytes32  _publisherAddress,
+      address  _authorAdress,
       bytes32  _entityIDHash,
       bytes32  _previousEntityHash,
       string   memory _eventType,
       string   memory _dataLocation,
       string[] memory _metadata
-    ) external override onlyOwner returns (bool) {
+    ) external override returns (bool) {
 
         emit EventDOMEv1(
             index,
             block.timestamp,
-            _origin,
+            _publisherAddress,
+            _authorAdress,
             _entityIDHash,
             _previousEntityHash,
             _eventType,
